@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--登录注册-->
+    <string name="confirm">确定</string>
+    <string name="open">Open Drawer</string>
+    <string name="close">Close Drawer</string>
+    <string name="AccountNotEmpty">账号不能为空</string>
+    <string name="AccountIncorrect">账号格式不正确</string>
+    <string name="PasswordNotEmpty">密码不能为空</string>
+    <string name="ExitAgain">再点一次退出</string>
+    <string name="Login">登录</string>
+    <string name="Register">注册</string>
+    <string name="ForgetPassword">忘记密码</string>
+    <string name="PleaseInputPhone1">请输入手机号或邮箱</string>
+    <string name="PleaseInputPhone">请输入手机号或邮箱</string>
+    <string name="PleaseInputPassword">请输入密码</string>
+    <string name="IncorrectCodeLength">验证码长度不正确</string>
+    <string name="VerificationEmpty">验证码不能为空</string>
+    <string name="PasswordLess">密码长度不得小于6位</string>
+    <string name="TwoNotEqual">两次密码输入不相等</string>
+    <string name="VerificationSuccessfully">验证码发送成功</string>
+    <string name="LoginSucceed">注册成功</string>
+    <string name="UserExists">该用户已存在！</string>
+    <string name="AuthenticationFailed">验证码发送失败</string>
+    <string name="SentOutToday">今天发送短信次数已用完!</string>
+    <string name="VerificationExpired">验证码已过期!</string>
+    <string name="VerificationError">验证码输入错误!</string>
+    <string name="UserNotRegisted">该用户未注册</string>
+    <string name="GetCode">获取验证码</string>
+
+
+    <string name="wangjimima">忘记密码</string>
+    <string name="qingyanzhengma">请输入验证码</string>
+    <string name="tongyibingzunshou">同意并遵守</string>
+    <string name="xieyi">《联手帮用户协议》</string>
+    <string name="qingshurumima">请输入6-16位密码</string>
+    <string name="yanzhengma">验证码</string>
+    <string name="shezhimima">设置密码</string>
+    <string name="querenmima">确认密码</string>
+
+
+    <string name="app_name">测试</string>
+    <string name="left_myFriends">我的好友</string>
+    <string name="left_lookingForDoctors">找医生</string>
+    <string name="left_myHealthyData">我的健康数据</string>
+    <string name="left_doctorCertification">认证医生</string>
+    <string name="left_myHomePage">我的主页</string>
+    <string name="left_settings">设置</string>
+    <string name="left_sos">紧急呼救</string>
+    <string name="left_doctor">大夫</string>
+    <string name="home_heartRate">心率</string>
+    <string name="home_bloodPressure">血压</string>
+    <string name="home_lungCapacity">肺活量</string>
+    <string name="home_tongue">舌诊</string>
+    <string name="home_bloodSuger">血糖</string>
+    <string name="home_sleep">睡眠质量</string>
+    <string name="home_bmi">身体质量指数</string>
+    <string name="home_temperature">体温</string>
+    <string name="home_steps">步数</string>
+    <string name="home_testSheet">化验单</string>
+    <string name="edit">编辑</string>
+    <string name="finish">完成</string>
+    <string name="MyConcernedItems">我关注的项目</string>
+    <string name="RecommendedExaminationItems">推荐检查的项目</string>
+
+
+    <!--个人信息-->
+    <string name="MyProfile">个人信息</string>
+    <string name="YearsOld">岁</string>
+    <string name="bianjiziliao">编辑资料</string>
+    <string name="gexingqianmingHint">还没有填写个性签名，介绍一下自己吧</string>
+    <!--编辑资料-->
+    <string name="ProfilePhoto">头像</string>
+    <string name="nicheng">昵称</string>
+    <string name="Gender">性别</string>
+    <string name="qingshurunicheng">请输入昵称</string>
+    <string name="Male">男</string>
+    <string name="Female">女</string>
+    <string name="Age">年龄</string>
+    <string name="Address">家庭住址</string>
+    <string name="Whatsup">个性签名</string>
+    <string name="qingshurudizhi">请输入地址</string>
+    <string name="caijianshibai">裁剪失败，请重新选择图片！</string>
+    <string name="paizhao">拍照</string>
+    <string name="congbendixiangce">从本地相册选择</string>
+
+
+</resources>

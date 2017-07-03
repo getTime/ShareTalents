@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_root"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="账号"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/font_normal" />
+
+        <View
+            android:layout_width="@dimen/div_line_height"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/textview1"
+            android:background="@color/div_line" />
+
+        <EditText
+            android:id="@+id/et_re_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/view"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:cursorVisible="true"
+            android:hint="@string/PleaseInputPhone"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/gray_99"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/div_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/yanzhengma"
+            android:textColor="@color/text_primary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_re_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/textView2"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:cursorVisible="true"
+                android:hint="@string/qingyanzhengma"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/gray_99"
+                android:textSize="@dimen/font_normal" />
+
+            <Button
+                android:id="@+id/btn_verify"
+                style="@style/btn_base"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:text="@string/GetCode"
+                android:textSize="@dimen/font_normal"
+                android:enabled="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/div_line_height"
+        android:background="@color/div_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/shezhimima"
+            android:textColor="@color/text_primary" />
+
+        <EditText
+            android:id="@+id/et_re_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/textView3"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:cursorVisible="true"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+            android:hint="@string/qingshurumima"
+            android:inputType="textVisiblePassword"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/gray_99"
+            android:textSize="@dimen/font_normal" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/div_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/querenmima"
+            android:textColor="@color/text_primary" />
+
+        <EditText
+            android:id="@+id/et_re_password_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_weight="4"
+            android:background="@color/white"
+            android:cursorVisible="true"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+            android:hint="@string/qingshurumima"
+            android:inputType="textVisiblePassword"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/gray_99"
+            android:textSize="@dimen/font_normal" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/div_line_height"
+        android:background="@color/div_line" />
+
+    <Button
+        android:id="@+id/btn_re_queren"
+        style="@style/btn_base"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:layout_marginTop="30dp"
+        android:text="@string/confirm"
+        android:enabled="false"
+
+         />
+
+    <RelativeLayout
+        android:id="@+id/rl_protocol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tongyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/tongyibingzunshou" />
+
+        <TextView
+            android:id="@+id/xieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/tongyi"
+            android:layout_toRightOf="@+id/tongyi"
+            android:text="@string/xieyi"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/font_normal" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+

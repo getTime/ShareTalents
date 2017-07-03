@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_root"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/shp_white"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <com.sirenzu.sharetalents.view.ClearEditText
+            android:id="@+id/et_acount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:cursorVisible="true"
+            android:drawableLeft="@mipmap/ic_account_login_zh"
+            android:drawablePadding="@dimen/view_interval"
+            android:hint="@string/PleaseInputPhone"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColor="@color/text_secondary"
+            android:textColorHint="@color/gray_99"
+            android:textSize="@dimen/font_normal" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@color/div_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_eyes"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:cursorVisible="true"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+                android:drawableLeft="@mipmap/ic_account_login_pwd"
+                android:drawablePadding="10dp"
+                android:hint="@string/PleaseInputPassword"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:minLines="1"
+                android:padding="5dip"
+                android:singleLine="true"
+                android:textColor="@color/text_secondary"
+                android:textColorHint="@color/gray_99"
+                android:textSize="@dimen/font_normal" />
+
+
+            <ImageView
+                android:id="@+id/iv_eyes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="6dp"
+                android:src="@mipmap/ic_account_login_close_eye"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

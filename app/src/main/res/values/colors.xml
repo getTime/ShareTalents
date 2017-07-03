@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00c5cd</color>
+    <color name="colorPrimaryDark">#00c5cd</color>
+    <color name="colorAccent">#00c5cd</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="orange">#FF843f</color>
+    <color name="red">#ec2727</color>
+
+    <color name="bg_root">#fafafa</color>
+    <color name="bg_content">@color/white</color>
+    <color name="div_line">#eaeaea</color>
+    <color name="btn_disable">#e5e5e5</color>
+    <color name="gray_99">#999999</color>
+    <color name="btn_normal">@color/colorPrimary</color>
+    <color name="btn_pressed">#00b9bf</color>
+    <color name="half_transparency">#44222222</color>
+    <!--字体颜色-->
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_disable">#aaaaaa</color>
+
+</resources>
