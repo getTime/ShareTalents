@@ -75,8 +75,6 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
         rg.setOnCheckedChangeListener(this);
     }
 
-
-
     public void onClick(View view) {
         switch (view.getId()) {
             case id.iv_avatar:
