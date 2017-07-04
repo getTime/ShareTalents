@@ -135,6 +135,49 @@
             app:tabTextColor="@color/text_primary"
             app:tabIndicatorHeight="1.5dp"
             android:background="#ffffff"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/white">
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/slt_type_choose" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="成交量"
+                android:textColor="@color/slt_type_choose" />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="信誉"
+                android:textColor="@color/slt_type_choose" />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="附近"
+                android:textColor="@color/slt_type_choose" />
+        </RadioGroup>
+
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager

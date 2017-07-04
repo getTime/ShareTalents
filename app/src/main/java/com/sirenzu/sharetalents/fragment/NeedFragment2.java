@@ -44,6 +44,8 @@ public class NeedFragment2 extends AppBaseFragment implements View.OnClickListen
     ViewPager viewPager;
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
+    @BindView(R.id.rb_all)
+    RadioButton rbAll;
 
     private List<CycleInfo> mList = new ArrayList<>();
     private MainActivity mainActivity;
@@ -57,12 +59,12 @@ public class NeedFragment2 extends AppBaseFragment implements View.OnClickListen
     @Override
     public void initData(Bundle savedInstanceState) {
         mainActivity = (MainActivity) getActivity();
-
         initView();
         initData();
     }
 
     private void initView() {
+        rbAll.setChecked(true);
         fragments.add(new TaHelpFragment());
         fragments.add(new TaHelpFragment());
         fragmentAdapter=new FragmentAdapter(getChildFragmentManager());
