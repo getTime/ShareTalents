@@ -7,6 +7,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +18,10 @@ import android.widget.RadioGroup;
 import com.sirenzu.sharetalents.R;
 import com.sirenzu.sharetalents.adapter.ServiceAdapter;
 import com.sirenzu.sharetalents.fragment.NeedFragment;
+import com.sirenzu.sharetalents.fragment.NeedFragment2;
 import com.sirenzu.sharetalents.fragment.ServiceFragment;
+
+import java.io.FileDescriptor;
 
 import butterknife.BindView;
 
@@ -51,8 +55,9 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
         return layout.activity_main;
     }
 
-    private NeedFragment needFragment;
+    private NeedFragment2 needFragment;
     private ServiceFragment serviceFragment;
+
 
     @Override
     public void initData(Bundle savedInstanceState) {
@@ -111,6 +116,7 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
 
 
     public void showFragment(int index) {
+        Log.e("tag","showFragment");
         FragmentTransaction ft = fragmentManager.beginTransaction();
         hideFragment(ft);
         //注意这里设置位置
@@ -122,7 +128,7 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
                  * 如果不为空，就将它从栈中显示出来
                  */
                 if (needFragment == null) {
-                    needFragment = new NeedFragment();
+                    needFragment = new NeedFragment2();
                     ft.add(R.id.fl_fragment, needFragment);
 
                 } else {
@@ -142,6 +148,7 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
     }
 
     public void hideFragment(FragmentTransaction ft) {
+        Log.e("tag","hideFragment");
         //如果不为空，就先隐藏起来
         if (needFragment != null) {
             ft.hide(needFragment);
@@ -149,7 +156,6 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
         if (serviceFragment != null) {
             ft.hide(serviceFragment);
         }
-
     }
 
 
@@ -163,13 +169,44 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
     protected void onSaveInstanceState(Bundle outState) {
         //屏幕旋转时记录位置
         outState.putInt(POSITION, position);
+        Log.e("tag","onSaveInstanceState");
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        Log.e("tag","onRestoreInstanceState");
         //屏幕恢复时取出位置
         showFragment(savedInstanceState.getInt(POSITION));
         super.onRestoreInstanceState(savedInstanceState);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e("tag","onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("tag","onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e("tag","onStop");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.e("tag","onRestart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("tag","onDestroy");
+    }
 }
