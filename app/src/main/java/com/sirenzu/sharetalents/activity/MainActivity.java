@@ -1,5 +1,6 @@
 package com.sirenzu.sharetalents.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
@@ -16,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.sirenzu.sharetalents.R;
+import com.sirenzu.sharetalents.activity.mine.EditMaterialActivity;
 import com.sirenzu.sharetalents.adapter.ServiceAdapter;
 import com.sirenzu.sharetalents.fragment.NeedFragment;
 import com.sirenzu.sharetalents.fragment.NeedFragment2;
@@ -83,7 +85,7 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()) {
             case id.iv_avatar:
-                showToast("headview");
+                startActivity(new Intent(this, EditMaterialActivity.class));
                 break;
             case R.id.iv_head_pic:
                 drawerLayout.openDrawer(Gravity.LEFT);
