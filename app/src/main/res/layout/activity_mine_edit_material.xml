@@ -16,6 +16,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/rl_head_pic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp">
@@ -53,6 +54,7 @@
                 android:background="@color/div_line" />
 
             <RelativeLayout
+                android:id="@+id/rl_nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp">

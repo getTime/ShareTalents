@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/tv_photo_graph"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal"
+            android:background="@drawable/shp_btn_pressed"
+            />
+
+        <TextView
+            android:id="@+id/tv_photo_album"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="从相册选取"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal"
+            android:background="@drawable/shp_btn_pressed"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/shp_btn_pressed"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

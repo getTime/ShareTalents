@@ -43,7 +43,7 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:textColor="@color/text_primary"
-            android:textSize="@dimen/font_small"
+            android:textSize="@dimen/font_normal"
             android:layout_marginRight="@dimen/horizontal_margin"
             tools:text="右边"
             android:visibility="visible"/>

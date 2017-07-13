@@ -23,9 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.account.LoginActivity"></activity>
+        <activity android:name=".activity.account.LoginActivity" />
         <activity android:name=".activity.account.RegisterActivity" />
-        <activity android:name=".activity.mine.EditMaterialActivity"></activity>
+        <activity android:name=".activity.mine.EditMaterialActivity" />
+        <activity android:name=".activity.mine.EditContentActivity"></activity>
     </application>
 
 </manifest>
