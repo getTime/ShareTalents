@@ -16,4 +16,5 @@
 
     <dimen name="w_iv">118dp</dimen>
     <dimen name="h_status_height">30dp</dimen>
+    <dimen name="w_mine_centre">202.5dp</dimen>
 </resources>

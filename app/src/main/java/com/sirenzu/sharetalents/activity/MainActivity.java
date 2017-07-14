@@ -18,6 +18,7 @@ import android.widget.RadioGroup;
 
 import com.sirenzu.sharetalents.R;
 import com.sirenzu.sharetalents.activity.mine.EditMaterialActivity;
+import com.sirenzu.sharetalents.activity.mine.MyCentreActivity;
 import com.sirenzu.sharetalents.adapter.ServiceAdapter;
 import com.sirenzu.sharetalents.fragment.NeedFragment;
 import com.sirenzu.sharetalents.fragment.NeedFragment2;
@@ -66,7 +67,6 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
         drawerLayout.setFitsSystemWindows(true);
         initStatusBar(color.colorPrimary);
         initView();
-
         fragmentManager = getSupportFragmentManager();
         showFragment(FRAGMENT_ONE);
     }
@@ -96,10 +96,14 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        Intent intent = null;
         switch (id) {
             case R.id.nav_home:
-                showToast("home");
+                intent = new Intent(this, MyCentreActivity.class);
                 break;
+        }
+        if (intent != null) {
+            startActivity(intent);
         }
         return false;
     }
@@ -118,7 +122,7 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
 
 
     public void showFragment(int index) {
-        Log.e("tag","showFragment");
+        Log.e("tag", "showFragment");
         FragmentTransaction ft = fragmentManager.beginTransaction();
         hideFragment(ft);
         //注意这里设置位置
@@ -150,7 +154,7 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
     }
 
     public void hideFragment(FragmentTransaction ft) {
-        Log.e("tag","hideFragment");
+        Log.e("tag", "hideFragment");
         //如果不为空，就先隐藏起来
         if (needFragment != null) {
             ft.hide(needFragment);
@@ -165,18 +169,19 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
 
     /**
      * 解决屏幕旋转时：重复添加fragment。
+     *
      * @param outState
      */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         //屏幕旋转时记录位置
         outState.putInt(POSITION, position);
-        Log.e("tag","onSaveInstanceState");
+        Log.e("tag", "onSaveInstanceState");
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        Log.e("tag","onRestoreInstanceState");
+        Log.e("tag", "onRestoreInstanceState");
         //屏幕恢复时取出位置
         showFragment(savedInstanceState.getInt(POSITION));
         super.onRestoreInstanceState(savedInstanceState);
@@ -185,30 +190,30 @@ public class MainActivity extends AppBaseActivity implements View.OnClickListene
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e("tag","onStart");
+        Log.e("tag", "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e("tag","onResume");
+        Log.e("tag", "onResume");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e("tag","onStop");
+        Log.e("tag", "onStop");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.e("tag","onRestart");
+        Log.e("tag", "onRestart");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e("tag","onDestroy");
+        Log.e("tag", "onDestroy");
     }
 }

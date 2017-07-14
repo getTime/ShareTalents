@@ -1,10 +1,13 @@
 package com.sirenzu.sharetalents.activity;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
@@ -39,13 +42,13 @@ public abstract class AppBaseActivity extends BaseActivity {
     private FrameLayout baseContent;
     private View childView;
     private RelativeLayout rlError;
-
+    public boolean isFitsSystemWindows=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_layout_content);
         baseContent = (FrameLayout) findViewById(R.id.content);
-        initView();
+        initViewSuper();
         showView();
         ButterKnife.bind(this);
         initData(savedInstanceState);
@@ -62,16 +65,32 @@ public abstract class AppBaseActivity extends BaseActivity {
     }
 
     /**
+     * 设置全透明状态栏
+     */
+    public void setTransparentStateBar(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+                    | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.TRANSPARENT);
+        }
+    }
+
+    /**
      * 初始化View  并且paddingTop和状态栏一样的高度。
      */
-    private void initView() {
+    public void initViewSuper() {
         childView = getLayoutInflater().inflate(getLayoutId(), null, false);
         baseContent.addView(childView);
         rlError = (RelativeLayout) getLayoutInflater().inflate(R.layout.base_layout_error, null, false);
         baseContent.addView(rlError);
 //        childView.setPadding(0,StatusBarCompat.getStatusBarHeight(this),0,0);
-        childView.setFitsSystemWindows(true);
-        rlError.setFitsSystemWindows(true);
+        childView.setFitsSystemWindows(isFitsSystemWindows);
+        rlError.setFitsSystemWindows(isFitsSystemWindows);
 //        rlError.setPadding(0,StatusBarCompat.getStatusBarHeight(this),0,0);
     }
 

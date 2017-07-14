@@ -3,5 +3,6 @@
 
     <dimen name="w_iv">342.7px</dimen>
     <dimen name="h_status_height">70px</dimen>
+    <dimen name="w_mine_centre">607.5px</dimen>
 
 </resources>

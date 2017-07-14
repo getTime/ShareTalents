@@ -26,7 +26,9 @@
         <activity android:name=".activity.account.LoginActivity" />
         <activity android:name=".activity.account.RegisterActivity" />
         <activity android:name=".activity.mine.EditMaterialActivity" />
-        <activity android:name=".activity.mine.EditContentActivity"></activity>
+        <activity android:name=".activity.mine.EditContentActivity" />
+        <activity android:name=".activity.mine.MyCentreActivity"
+            ></activity>
     </application>
 
 </manifest>

@@ -30,6 +30,5 @@ dependencies {
     compile project(':base')
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.jakewharton:butterknife:8.4.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
 }
