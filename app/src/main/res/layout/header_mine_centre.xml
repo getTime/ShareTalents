@@ -7,7 +7,8 @@
     android:background="@color/white"
     android:focusable="true"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:paddingTop="10dp"
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +16,9 @@
         android:gravity="center_vertical"
         android:text="我的信誉\t\t\t\t20"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/font_normal" />
+        android:textSize="@dimen/font_normal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +26,9 @@
         android:layout_marginTop="10dp"
         android:text="我的积分\t\t\t\t20"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/font_normal" />
+        android:textSize="@dimen/font_normal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,14 +36,18 @@
         android:layout_marginTop="10dp"
         android:text="我的认证\t\t\t\t空"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/font_normal" />
+        android:textSize="@dimen/font_normal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="我的年龄\t\t\t\t25"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/font_normal" />
+        android:textSize="@dimen/font_normal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,20 +55,31 @@
         android:layout_marginTop="10dp"
         android:text="我的职业\t\t\t\t理发师"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/font_normal" />
+        android:textSize="@dimen/font_normal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="所在地区\t\t\t\t北京"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/font_normal" />
+        android:textSize="@dimen/font_normal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="我的擅长\t\t\t\t喝酒"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/font_normal" />
-
+        android:textSize="@dimen/font_normal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_header"
+        android:layout_marginTop="10dp"
+        android:background="@color/div_line" />
 </LinearLayout>

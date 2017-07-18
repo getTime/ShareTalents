@@ -38,8 +38,7 @@ import butterknife.BindView;
  * 个人中心  主页
  */
 public class MyCentreActivity extends AppBaseActivity {
-//    @BindView(R.id.rv_mine_dynamic)
-//    RecyclerView rvMineDynamic;
+    //<-----------------------UI控件成员变量声明区------------------------------->
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.toolbarLayout)
@@ -48,12 +47,11 @@ public class MyCentreActivity extends AppBaseActivity {
     TabLayout tabLayout;
     @BindView(R.id.viewpager)
     ViewPager viewPager;
+    //<!-----------------------普通成员变量声明区------------------------------->
+    private List<Fragment> mFragments = new ArrayList<>();
+    private MyCentreActivity.mFragmentAdapter mFragmentAdapter;
 
-    private List<Fragment> fragments = new ArrayList<>();
-    private MyCentreActivity.FragmentAdapter fragmentAdapter;
-    private WrapAdapter<ServiceAdapter> mWrapAdapter;
-    private ServiceAdapter mServiceAdapter;
-
+    //<-----------------------重载的逻辑方法区------------------------------->
     @Override
     public int getLayoutId() {
         return R.layout.activity_my_centre;
@@ -71,21 +69,22 @@ public class MyCentreActivity extends AppBaseActivity {
 
     /**
      * 设置状态栏是否 FitsSystemWindows
-     *  false 不修改，true 修改
+     * false 不修改，true 修改
      */
     @Override
     public void initViewSuper() {
-        isFitsSystemWindows=false;
+        isFitsSystemWindows = false;
         super.initViewSuper();
     }
 
+    //<-----------------------------普通逻辑方法区------------------------------>
     private void initAdapter() {
 
-        fragments.add(new TaHelpFragment());
-        fragments.add(new TaHelpFragment());
-        fragments.add(new TaHelpFragment());
-        fragmentAdapter=new MyCentreActivity.FragmentAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(fragmentAdapter);
+        mFragments.add(new TaHelpFragment());
+        mFragments.add(new TaHelpFragment());
+        mFragments.add(new TaHelpFragment());
+        mFragmentAdapter = new MyCentreActivity.mFragmentAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(mFragmentAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
 //        mServiceAdapter = new ServiceAdapter(this);
@@ -96,27 +95,25 @@ public class MyCentreActivity extends AppBaseActivity {
 //        rvMineDynamic.setAdapter(mWrapAdapter);
     }
 
-    private void addHeadView() {
-        View headView = LayoutInflater.from(this).inflate(R.layout.header_mine_centre, null, false);
-        mWrapAdapter.addHeaderView(headView);
-    }
 
-    class FragmentAdapter extends FragmentPagerAdapter {
-        private String[] titles = {"我的动态", "我的服务","我的需求"};
+    //<-----------------------------异步任务回调方法区------------------------------>
+    //<-----------------------------内部类声明区------------------------------>
+    class mFragmentAdapter extends FragmentPagerAdapter {
+        private String[] titles = {"我的动态", "我的服务", "我的需求"};
         public Context context;
 
-        public FragmentAdapter(FragmentManager fm) {
+        public mFragmentAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public Fragment getItem(int position) {
-            return fragments.get(position);
+            return mFragments.get(position);
         }
 
         @Override
         public int getCount() {
-            return fragments.size();
+            return mFragments.size();
         }
 
         //重写这个方法，将设置每个Tab的标题
